@@ -15,8 +15,9 @@ public class GeoFenceAlert {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String isEnabled;
-    private int notificationIntervalInMinute;
+    private Boolean isEnabled;
+    private Integer notificationIntervalInMinute;
 
     // Constructors, getters, setters
 }
+

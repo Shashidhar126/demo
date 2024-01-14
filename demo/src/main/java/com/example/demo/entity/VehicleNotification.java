@@ -15,12 +15,12 @@ public class VehicleNotification {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String isEnabled;
-    private String isTowAlertEnabled;
-    private String isLowRangeAlertEnabled;
-    private String isLowBatteryAlertEnabled;
-    private String isBatteryHealthAlertEnabled;
-    private String isFallDetectionAlertEnabled;
+    private Boolean isEnabled;
+    private Boolean isTowAlertEnabled;
+    private Boolean isLowRangeAlertEnabled;
+    private Boolean isLowBatteryAlertEnabled;
+    private Boolean isBatteryHealthAlertEnabled;
+    private Boolean isFallDetectionAlertEnabled;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "speed_limit_alert_id")
@@ -29,7 +29,8 @@ public class VehicleNotification {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "geo_fence_alert_id")
     private GeoFenceAlert geoFenceAlert;
+
+    // Constructors, getters, setters
 }
-// Constructors, getters, setters
 
 

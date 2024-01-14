@@ -15,9 +15,9 @@ public class SpeedLimitAlert {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String isEnabled;
-    private int speedLimit;
-    private int notificationIntervalInMinute;
+    private Boolean isEnabled;
+    private Integer speedLimit;
+    private Integer notificationIntervalInMinute;
 
     // Constructors, getters, setters
 }

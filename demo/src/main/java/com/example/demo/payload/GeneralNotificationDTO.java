@@ -1,19 +1,11 @@
-package com.example.demo.entity;
+package com.example.demo.payload;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import javax.persistence.*;
-
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GeneralNotification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class GeneralNotificationDTO {
 
     private Boolean enabled;
     private Boolean appUpdateEnabled;
@@ -25,5 +17,4 @@ public class GeneralNotification {
     private Boolean latestOffersEnabled;
     private Boolean storeUpdatesEnabled;
 
-    // Constructors, getters, setters
 }

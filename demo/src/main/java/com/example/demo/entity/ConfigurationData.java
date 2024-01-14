@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
@@ -10,12 +11,13 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class ConfigurationData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String isEnabled;
+    private Boolean isEnabled;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "vehicle_notification_id")

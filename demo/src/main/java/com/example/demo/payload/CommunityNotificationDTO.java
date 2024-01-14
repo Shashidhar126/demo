@@ -1,20 +1,11 @@
-package com.example.demo.entity;
+package com.example.demo.payload;
 
+import lombok.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommunityNotification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class CommunityNotificationDTO {
 
     private Boolean isEnabled;
     private Boolean isLikeOrReactionOnPhotosEnabled;
@@ -25,8 +16,4 @@ public class CommunityNotification {
     private Boolean isEventsOrRidesEnabled;
     private Boolean isRoleChangesEnabled;
     private Boolean isCommunityUpdatesEnabled;
-
-    // Constructors, getters, setters
 }
-
-
